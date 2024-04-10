@@ -142,9 +142,9 @@ class Monocle:
         Returns:
             argparse.Namespace: Parsed arguments.
         """
-        parser = argparse.ArgumentParser(description="Local Language Model (LLM) - Explain code snippets")
-        parser.add_argument("--binary", "-b", required=True, help="The Binary to search")
-        parser.add_argument("--find", "-f", required=True, help="The component to find")
+        parser = argparse.ArgumentParser(description="Monocle - Large Language Model for Binary Analysis Search")
+        parser.add_argument("--binary", "-b", required=True, help="The binary to search (this will need to be in a format that Ghidra can decompile).")
+        parser.add_argument("--find", "-f", required=True, help="The component to find (e.g. 'encryption logic').")
         return parser.parse_args()
     
     def _remove_inst_tags(self, text):
