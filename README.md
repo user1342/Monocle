@@ -84,10 +84,19 @@ The format of this live display can be seen below:
 Below is an example of using Monocle on the ```pure-authd``` x86 binary [found here](https://github.com/polaco1782/linux-static-binaries/blob/master/x86-i686/pure-authd) to search for authentication code.
 
 ```
-python.exe /Monocle/monocle.py --binary "..\linux-static-binaries-master\linux-static-binaries-master\x86-i686\pure-authd" --find "authentication code"
+monocle.exe --binary "..\linux-static-binaries-master\linux-static-binaries-master\x86-i686\pure-authd" --find "authentication code"
 ```
 <p align="center">
     <img width=100% src="example.gif">
+  </a>
+</p>
+
+Below is anouther example against the ```pure-authd``` binary, however, this time the search criteria was specified as ```memory corruption vulnerabilities```.
+```
+monocle.exe --find "memory corruption vulnerabilities" --binary "..\linux-static-binaries-master\linux-static-binaries-master\x86-i686\pure-authd"
+```
+<p align="center">
+    <img width=100% src="example2.png">
   </a>
 </p>
 
