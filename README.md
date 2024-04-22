@@ -32,6 +32,8 @@ Monocle requires **Nvidia CUDA** which allows for greatly increased performance 
 - Install the appropriate dependancies from here: https://pytorch.org/get-started/locally/
 - Validate CUDA is installed correctly by running the following and being returned a prompt ```python -c "import torch; print(torch.rand(2,3).cuda())"```
 
+**Update:** Due to changes in the Mistral model implementation you will need to accept the Mistral terms [here](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) and update the code accordingly with your token as [seen here](https://huggingface.co/docs/hub/en/security-tokens). 
+
 Monocle requires [Ghidra](https://ghidra-sre.org/) to be installed and accessible. Additionally, ensure that `analyzeHeadless` is available in your environment. 
 
 Python dependencies can be found in the `requirements.txt` file:
