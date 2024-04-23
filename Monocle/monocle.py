@@ -30,8 +30,8 @@ class Monocle:
             bnb_4bit_quant_type="nf4",
             bnb_4bit_use_double_quant=True,
         )
-        model = AutoModelForCausalLM.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2", quantization_config=quantization_config)
-        tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side="left")
+        model = AutoModelForCausalLM.from_pretrained("unsloth/mistral-7b-instruct-v0.2-bnb-4bit", quantization_config=quantization_config)
+        tokenizer = AutoTokenizer.from_pretrained("unsloth/mistral-7b-instruct-v0.2-bnb-4bit", padding_side="left")
         return model, tokenizer
     
     def _get_code_from_decom_file(self, path_to_file):
